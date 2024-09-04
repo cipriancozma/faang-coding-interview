@@ -1,2 +1,2 @@
-# faang-coding-interview
-Big Tech Interviews
+# FAANG Coding Interview (Big Tech Interviews)
+---
