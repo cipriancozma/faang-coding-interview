@@ -53,9 +53,14 @@ const twoSum = (arr, target) => {
     return result;
 }
 
+// 4. Test our code with the test cases
 console.log(twoSum(arr, 11)) // GOOD
 console.log(twoSum(arr, 25)) // GOOD
 console.log(twoSum([], 1)) // GOOD
 console.log(twoSum([5], 5)) // GOOD
 console.log(twoSum([1, 6], 7)); // GOOD
+
+// 5. Analyzing Space & Time Complexity
+// O(n2) =>  Time Complexity
+// O(1) => Space Complexity
 
