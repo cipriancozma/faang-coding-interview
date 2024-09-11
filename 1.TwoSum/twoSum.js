@@ -37,30 +37,49 @@
 // MY FIRST APPROACH
 const arr = [1, 3, 7, 9, 2];
 
-const twoSum = (arr, target) => {
-    if(arr.length < 2) return null;
+// const twoSum = (arr, target) => {
+//     if(arr.length < 2) return null;
 
-    let result = [];
-    for(let i = 0; i < arr.length; i++) {
-       for(let j = i + 1; j < arr.length; j++) {
-            if(arr[i] + arr[j] === target) {
-                result = [i, j];
-            } else {
-                result = null;
-            }
-       }
-    }
-    return result;
-}
+//     let result = [];
+//     for(let i = 0; i < arr.length; i++) {
+//        for(let j = i + 1; j < arr.length; j++) {
+//             if(arr[i] + arr[j] === target) {
+//                 result = [i, j];
+//             } else {
+//                 result = null;
+//             }
+//        }
+//     }
+//     return result;
+// }
 
 // 4. Test our code with the test cases
-console.log(twoSum(arr, 11)) // GOOD
-console.log(twoSum(arr, 25)) // GOOD
-console.log(twoSum([], 1)) // GOOD
-console.log(twoSum([5], 5)) // GOOD
-console.log(twoSum([1, 6], 7)); // GOOD
+// console.log(twoSum(arr, 11)) // GOOD
+// console.log(twoSum(arr, 25)) // GOOD
+// console.log(twoSum([], 1)) // GOOD
+// console.log(twoSum([5], 5)) // GOOD
+// console.log(twoSum([1, 6], 7)); // GOOD
 
 // 5. Analyzing Space & Time Complexity
 // O(n2) =>  Time Complexity
 // O(1) => Space Complexity
 
+// 6. Optimizing the solution
+const twoSum = (arr, target) => {
+    if(arr.length < 2) return null;
+
+    const numsMap = {};
+    let result = [];
+    for(let i = 0; i < arr.length; i++) {
+       const currentMapVal = numsMap[arr[i]];
+
+       
+    }
+    return result;
+}
+
+console.log(twoSum(arr, 11))
+console.log(twoSum(arr, 25))
+console.log(twoSum([], 1)) 
+console.log(twoSum([5], 5))
+console.log(twoSum([1, 6], 7));
