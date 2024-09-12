@@ -69,17 +69,25 @@ const twoSum = (arr, target) => {
     if(arr.length < 2) return null;
 
     const numsMap = {};
-    let result = [];
+    
     for(let i = 0; i < arr.length; i++) {
        const currentMapVal = numsMap[arr[i]];
-
-       
+       if(currentMapVal >= 0) {
+        return [currentMapVal, i];
+       } else {
+        const numberToFind = target - arr[i];
+        numsMap[numberToFind] = i;
+       }
     }
-    return result;
+    return null;
 }
 
-console.log(twoSum(arr, 11))
-console.log(twoSum(arr, 25))
-console.log(twoSum([], 1)) 
-console.log(twoSum([5], 5))
-console.log(twoSum([1, 6], 7));
+console.log(twoSum(arr, 11)) // GOOD
+// console.log(twoSum(arr, 25)) // GOOD
+// console.log(twoSum([], 1))  // GOOD
+// console.log(twoSum([5], 5)) // GOOD
+// console.log(twoSum([1, 6], 7)); // GOOD
+
+// 7. Analyzing Space & Time Complexity
+// O(n) =>  Time Complexity
+// O(n) => Space Complexity
